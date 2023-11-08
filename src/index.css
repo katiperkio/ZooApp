@@ -1,12 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Quicksand", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: #333;
+  color: white;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -21,6 +18,102 @@
 }
 
 body {
+  width: 100vw;
   min-width: 320px;
   min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 1rem 0;
+}
+
+main {
+  min-height: calc(100vh - 100px);
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: auto;
+  margin-top: 1rem;
+  width: 80%;
+}
+
+.card {
+  color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  background-color: white;
+  position: relative;
+}
+
+.card img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 300px;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+button {
+  font-family: inherit;
+  border-style: none;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+
+.votes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.close {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 3px;
+  background-color: rgba(233, 233, 233, 0.367);
+}
+
+.close:hover {
+  background-color: rgba(233, 233, 233);
+}
+
+.downvote,
+.upvote {
+  display: flex;
+  font-size: 30px;
+  margin: 0.5rem 0.1rem;
+  padding: 8px;
+}
+
+.hearts {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
+}
+
+.hearts span {
+  margin-left: 3px;
+  color: #d04c5e;
 }
