@@ -1,19 +1,25 @@
-const Card = ({ name, close, dislike, like, votes }) => {
+const Card = ({ name, close, dislike, like, likes }) => {
   return (
     <div className="card">
-      <img src="https://source.unsplash.com/random" alt="unsplash random" />
+      <div className="image">
+        <img
+          src={`https://source.unsplash.com/400x400/?${name}`}
+          alt="unsplash random"
+        />
+      </div>
       <p className="title">{name}</p>
       <button onClick={close} className="close">
         <span className="material-symbols-outlined">close</span>
       </button>
       <div className="votes">
-        <button className="downvote">
+        <button onClick={dislike} className="downvote">
           <span className="material-symbols-outlined">remove</span>
         </button>
         <p className="hearts">
-          0 <span className="material-symbols-outlined">favorite</span>
+          {likes}
+          <span className="material-symbols-outlined">favorite</span>
         </p>
-        <button className="upvote">
+        <button onClick={like} className="upvote">
           <span className="material-symbols-outlined">add</span>
         </button>
       </div>

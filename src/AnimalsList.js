@@ -165,12 +165,3 @@ export const birds = [
 ];
 
 export default animals;
-
-// Likes:
-// When you click the likes, you have to know what animal was clicked.
-// Function is taking the name and loops through the state to find the object that was clicked.
-// Open the object, replace the likes and put the object back to updated array.
-// You can have only one function for like and dislike. LikeHandler can handle both, it's a matter of + and -.
-// e.g. addLikes{() => likesHandler(animal.name, "add")} and removeLikes{() => likesHandler(animal.name, "remove")}.
-// To make search interactive you have to re-render it all the time.
-// Put search keyword in state, every time you type it updates UI.
