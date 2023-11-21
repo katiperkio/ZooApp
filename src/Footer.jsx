@@ -1,9 +1,5 @@
 const Footer = () => {
-    return (
-        <footer>
-            Copyright 2023 blabla
-        </footer>
-    )
+  return <footer>Zoo App is a BCH practice project done by Kati Perkiö</footer>;
 };
 
 export default Footer;

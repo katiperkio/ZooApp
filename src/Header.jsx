@@ -18,6 +18,7 @@ const Header = ({ displayAnimalsHandler }) => {
         <button className="navbtn" onClick={() => displayAnimalsHandler("all")}>
           All
         </button>
+        <button className="navbtn">About</button>
       </nav>
     </header>
   );
