@@ -6,7 +6,8 @@ import { animals } from "./AnimalsList.js";
 import { birds } from "./AnimalsList.js";
 
 function App() {
-  const [animalsData, setAnimals] = useState(animals);
+  const allAnimals = [...animals, ...birds];
+  const [animalsData, setAnimals] = useState(allAnimals);
   const [search, setSearch] = useState("");
 
   const removeHandler = (name) => {
@@ -33,9 +34,19 @@ function App() {
     setAnimals(updatedArray);
   };
 
+  const displayAnimalsHandler = (display) => {
+    if (display === "animals") {
+      setAnimals(animals);
+    } else if (display === "birds") {
+      setAnimals(birds);
+    } else {
+      setAnimals(allAnimals);
+    }
+  };
+
   return (
     <>
-      <Header logo="Animals" />
+      <Header displayAnimalsHandler={displayAnimalsHandler} />
       <main>
         <input
           className="search"
@@ -66,10 +77,3 @@ function App() {
 }
 
 export default App;
-
-// Likes:
-// When you click the likes, you have to know what animal was clicked.
-// Function is taking the name and loops through the state to find the object that was clicked.
-// Open the object, replace the likes and put the object back to updated array.
-// You can have only one function for like and dislike. LikeHandler can handle both, it's a matter of + and -.
-// e.g. addLikes{() => likesHandler(animal.name, "add")} and removeLikes{() => likesHandler(animal.name, "remove")}.

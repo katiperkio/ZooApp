@@ -1,7 +1,24 @@
-const Header = () => {
+const Header = ({ displayAnimalsHandler }) => {
   return (
     <header>
-      <h1>Animals</h1>
+      <h1>Zoo App</h1>
+      <nav>
+        <button
+          className="navbtn"
+          onClick={() => displayAnimalsHandler("animals")}
+        >
+          Animals
+        </button>
+        <button
+          className="navbtn"
+          onClick={() => displayAnimalsHandler("birds")}
+        >
+          Birds
+        </button>
+        <button className="navbtn" onClick={() => displayAnimalsHandler("all")}>
+          All
+        </button>
+      </nav>
     </header>
   );
 };

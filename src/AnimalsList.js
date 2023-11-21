@@ -130,7 +130,6 @@ export const birds = [
   { name: "Crow", likes: 0 },
   { name: "Cardinal", likes: 0 },
   { name: "Jay", likes: 0 },
-  { name: "Goldfinch", likes: 0 },
   { name: "Blackbird", likes: 0 },
   { name: "Bluebird", likes: 0 },
   { name: "Swallow", likes: 0 },
